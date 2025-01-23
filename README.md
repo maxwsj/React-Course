@@ -1,2 +1,2 @@
 # React-Course
-In this course, l'll learn React from the ground up, mastering advanced skills like building fullstack apps with NextJS, managing state with Redux, implementing routing and authentication, testing React apps, and much more—all while creating high-quality projects.
+In this course, l'll learn React from the ground up and build multiple high-quality demo apps, including fullstack apps with NextJS 14+. Master React Hooks, Components, Context API, and Redux to manage complex state efficiently. Explore routing, route-related data fetching with React Router, and implement user authentication. Build standalone apps or connect them to backends via HTTP, and get started with React Unit Testing..
