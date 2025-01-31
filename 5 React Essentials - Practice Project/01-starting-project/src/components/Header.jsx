@@ -1,4 +1,4 @@
-import logo from '../src/assets/investment-calculator-logo.png';
+import logo from '../assets/investment-calculator-logo.png';
 
 export default function Header() {
    return (
