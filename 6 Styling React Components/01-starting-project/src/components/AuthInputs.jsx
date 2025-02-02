@@ -1,14 +1,6 @@
 import { useState } from 'react';
-import { styled } from 'styled-components';
 import Button from './Button';
 import Input from './Input';
-
-const ControlContainer = styled.div`
-   display: flex;
-   flex-direction: column;
-   gap: 0.5rem;
-   margin-bottom: 1.5rem;
-`;
 
 export default function AuthInputs() {
    const [enteredEmail, setEnteredEmail] = useState('');
@@ -31,12 +23,15 @@ export default function AuthInputs() {
    const passwordNotValid = submitted && enteredPassword.trim().length < 6;
 
    return (
-      <div id="auth-inputs">
-         <ControlContainer>
+      <div
+         id="auth-inputs"
+         className="w-full max-w-sm p-8 mx-auto rounded shadow-md bg-gradient-to-b from-stone-700 to-stone-800"
+      >
+         <div className="flex flex-col gap-2 mb-6">
             <Input
                label="Email"
                type="email"
-               $invalid={emailNotValid}
+               invalid={emailNotValid}
                onChange={(event) =>
                   handleInputChange('email', event.target.value)
                }
@@ -47,7 +42,7 @@ export default function AuthInputs() {
             />
 
             <Input
-               $invalid={passwordNotValid}
+               invalid={passwordNotValid}
                label="Passwrod"
                type="password"
                onChange={(event) =>
@@ -55,7 +50,7 @@ export default function AuthInputs() {
                }
                // className={passwordNotValid ? 'invalid' : undefined}
             />
-         </ControlContainer>
+         </div>
          <div className="actions">
             <button type="button" className="text-button">
                Create a new account
@@ -65,3 +60,14 @@ export default function AuthInputs() {
       </div>
    );
 }
+
+/*
+import { styled } from 'styled-components';
+
+const ControlContainer = styled.div`
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+   margin-bottom: 1.5rem;
+`;
+*/
