@@ -49,8 +49,7 @@ function App() {
       });
 
       const storedIds =
-         JSON.parse(localStorage.setItem('selectedPlaces')) || [];
-
+         JSON.parse(localStorage.getItem('selectedPlaces')) || [];
       if (storedIds.indexOf(id) === -1) {
          localStorage.setItem(
             'selectedPlaces',
@@ -66,7 +65,7 @@ function App() {
       setModalIsOpen(false);
 
       const storedIds =
-         JSON.parse(localStorage.setItem('selectedPlaces')) || [];
+         JSON.parse(localStorage.getItem('selectedPlaces')) || [];
       localStorage.setItem(
          'selectedPlaces',
          JSON.stringify(storedIds.filter((id) => id !== selectedPlace.current))
