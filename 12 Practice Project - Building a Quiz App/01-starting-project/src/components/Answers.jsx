@@ -12,28 +12,29 @@ export default function Answers({
       shuffledAnswers.current = [...answers];
       shuffledAnswers.current.sort(() => Math.random() - 0.5);
    }
+
    return (
       <ul id="answers">
          {shuffledAnswers.current.map((answer) => {
             const isSelected = selectedAnswer === answer;
-            let cssClasses = '';
+            let cssClass = '';
 
             if (answerState === 'answered' && isSelected) {
-               cssClasses = 'selected';
+               cssClass = 'selected';
             }
 
             if (
                (answerState === 'correct' || answerState === 'wrong') &&
                isSelected
             ) {
-               cssClasses = answerState;
+               cssClass = answerState;
             }
 
             return (
                <li key={answer} className="answer">
                   <button
                      onClick={() => onSelect(answer)}
-                     className={cssClasses}
+                     className={cssClass}
                      disabled={answerState !== ''}
                   >
                      {answer}
