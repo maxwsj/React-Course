@@ -1,4 +1,4 @@
-import { useRef, useState, useCallback, useEffect } from 'react';
+import { useRef, useState, useCallback } from 'react';
 import { useFetch } from './hooks/useFetch.js';
 
 import Places from './components/Places.jsx';
@@ -78,7 +78,7 @@ function App() {
 
          setModalIsOpen(false);
       },
-      [userPlaces]
+      [userPlaces, setUserPlaces]
    );
 
    function handleError() {
@@ -92,7 +92,7 @@ function App() {
                <Error
                   title="An error occurred!"
                   message={errorUpdatingPlaces.message}
-                  // onConfirm={handleError}
+                  onConfirm={handleError}
                />
             )}
          </Modal>
@@ -100,7 +100,7 @@ function App() {
          <Modal open={modalIsOpen} onClose={handleStopRemovePlace}>
             <DeleteConfirmation
                onCancel={handleStopRemovePlace}
-               //  onConfirm={handleRemovePlace}
+               onConfirm={handleRemovePlace}
             />
          </Modal>
 
@@ -127,9 +127,7 @@ function App() {
                />
             )}
 
-            <AvailablePlaces
-            // onSelectPlace={handleSelectPlace}
-            />
+            <AvailablePlaces onSelectPlace={handleSelectPlace} />
          </main>
       </>
    );
