@@ -9,9 +9,6 @@ export default function Signup() {
       const data = Object.fromEntries(fd.entries());
       data.acquistion = acquisitionChannel;
       console.log(data);
-
-      // How could we reset the input fields
-      event.target.reset();
    }
 
    return (
