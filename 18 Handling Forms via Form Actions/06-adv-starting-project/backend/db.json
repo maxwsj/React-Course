@@ -1,6 +1,13 @@
 {
   "opinions": [
     {
+      "id": 1739404324937,
+      "votes": 0,
+      "userName": "William",
+      "title": "React is perfect",
+      "body": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text"
+    },
+    {
       "id": 1,
       "userName": "Maximilian Schwarzmüller",
       "title": "Do yourself a favor and learn React!",
