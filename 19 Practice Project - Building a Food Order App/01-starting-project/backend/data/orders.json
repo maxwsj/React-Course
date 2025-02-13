@@ -1,1 +1,22 @@
-[]
+[
+   {
+      "items": [
+         {
+            "id": "m1",
+            "name": "Mac & Cheese",
+            "price": "8.99",
+            "description": "Creamy cheddar cheese mixed with perfectly cooked macaroni, topped with crispy breadcrumbs. A classic comfort food.",
+            "image": "images/mac-and-cheese.jpg",
+            "quantity": 3
+         }
+      ],
+      "customer": {
+         "name": "Max Wil",
+         "email": "max@teste.com",
+         "street": "Radd dwdawd dddd",
+         "postal-code": "42424242",
+         "city": "Saaa Aasdwa"
+      },
+      "id": "991.1703148385218"
+   }
+]
