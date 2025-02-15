@@ -10,7 +10,7 @@ const counterSlice = createSlice({
    name: 'counter',
    initialState, // its the object above
    // Are an object / map of all recuers that this slice needs
-   reducer: {
+   reducers: {
       increment(state) {
          state.counter++;
       },
@@ -18,7 +18,7 @@ const counterSlice = createSlice({
          state.counter--;
       },
       increase(state, action) {
-         state.counter = state.counter + action.amount;
+         state.counter = state.counter + action.payload;
       },
       toggleCounter(state) {
          state.showCounter = !state.showCounter;
@@ -31,5 +31,7 @@ const store = configureStore({
    reducer: counterSlice.reducer,
    // reducer: { counter: counterSlice.reducer }, // if we have more than one slice we could use like this, the "counter" name is defined by us
 });
+
+export const counterActions = counterSlice.actions;
 
 export default store;
