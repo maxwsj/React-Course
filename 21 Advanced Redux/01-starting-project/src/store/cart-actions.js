@@ -19,6 +19,7 @@ export const fetchCartData = () => {
 
       try {
          const cartData = await fetchData();
+         // With this we avoid ending with undefined items
          dispatch(
             cartActions.replaceCart({
                items: cartData.items || [],
@@ -53,7 +54,10 @@ export const sendCartData = (cart) => {
             'https://react-course-91ed8-default-rtdb.firebaseio.com/cart.json',
             {
                method: 'PUT',
-               body: JSON.stringify(cart),
+               body: JSON.stringify({
+                  items: cart.items,
+                  totalQuantity: cart.totalQuantity,
+               }),
             }
          );
 
