@@ -7,11 +7,10 @@ import { fetchEvents } from '../../util/http.js';
 
 export default function NewEventsSection() {
    const { data, isPending, isError, error } = useQuery({
-      queryKey: ['events'], // This will be necessary to reuse the data later
-      // With this query we define the actual code that will be sent with the actual request
-      queryFn: fetchEvents,
-
-      // This controls after which time React Query will send such a Behind the Scenes request to get updated data if it found data in your cache.
+      queryKey: ['events', { max: 3 }],
+      queryFn: ({ signal, queryKey }) =>
+         // With ...queryKey[1] we are accessing the attributes of the object above ['events', { max: 3 }]
+         fetchEvents({ signal, ...queryKey[1] }),
       staleTime: 5000,
    });
 
