@@ -1,3 +1,8 @@
-export default function MealSlug() {
-   return <div>Teste</div>;
+export default function MealDetailsPage() {
+   return (
+      <>
+         <header></header>
+         <main></main>
+      </>
+   );
 }
