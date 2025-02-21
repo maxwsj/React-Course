@@ -25,6 +25,7 @@ export async function saveMeal(meal) {
    const stream = fs.createWriteStream(`public/images/${fileName}`);
    const bufferedImage = await meal.image.arrayBuffer();
 
+   // eslint-disable-next-line no-undef
    stream.write(Buffer.from(bufferedImage), (error) => {
       if (error) {
          throw new Error('Saving image failed!');

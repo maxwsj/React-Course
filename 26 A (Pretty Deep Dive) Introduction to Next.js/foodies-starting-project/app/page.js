@@ -2,6 +2,11 @@ import Link from 'next/link';
 import classes from './page.module.css';
 import ImageSlideshow from '@/components/images/image-slideshow';
 
+export const metadata = {
+   title: 'All Meals',
+   description: 'Browse the delicious meals shared by our vibrant community.',
+};
+
 export default function Home() {
    return (
       <>
