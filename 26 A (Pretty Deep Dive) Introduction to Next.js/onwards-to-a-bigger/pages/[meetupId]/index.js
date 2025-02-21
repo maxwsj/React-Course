@@ -1,3 +1,6 @@
-export default function InitialPage() {
-   return <div>Teste</div>;
+import { Fragment } from 'react';
+import MeetupDetail from '../../components/meetups/MeetupDetail';
+
+export default function MeetupDetails() {
+   return <MeetupDetail />;
 }
