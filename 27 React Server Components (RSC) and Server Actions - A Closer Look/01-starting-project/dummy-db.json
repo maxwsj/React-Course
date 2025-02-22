@@ -1,4 +1,6 @@
 [
     { "id": "u1", "name": "Max Schwarzmüller", "title": "Instructor" },
-    { "id": "u2", "name": "Manuel Lorenz", "title": "Instructor" }
+    { "id": "u2", "name": "Manuel Lorenz", "title": "Instructor" },
+    { "id": "u3", "name": "Max", "title": "Instructor" },
+    { "id": "u4", "name": "Manuel", "title": "Instructor" }
   ]

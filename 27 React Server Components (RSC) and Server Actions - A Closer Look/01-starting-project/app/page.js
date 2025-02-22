@@ -1,11 +1,12 @@
-import ClientDemo from '@/components/ClientDemo';
-import DataFetchingDemo from '@/components/DataFetchingDemo';
-import RSCDemo from '@/components/RSCDemo';
+import UsePromiseDemo from '@/components/UsePromisesDemo';
+import fs from 'node:fs/promises';
 
-export default function Home() {
+export default async function Home() {
+   const data = await fs.readFile('dummy-db.json', 'utf-8');
+   const users = JSON.parse(data);
    return (
       <main>
-         <DataFetchingDemo />
+         <UsePromiseDemo users={users} />
       </main>
    );
 }
