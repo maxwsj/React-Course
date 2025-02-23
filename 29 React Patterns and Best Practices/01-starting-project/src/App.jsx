@@ -2,6 +2,7 @@ import Accordion from './components/Accordion/Accordion';
 import AccordionContent from './components/Accordion/AccordionContent';
 import AccordionTitle from './components/Accordion/AccordionTitle';
 import SearchableList from './components/SearchableList/SearchableList';
+import Place from './Place';
 import { PLACES } from './util/Places';
 
 function App() {
@@ -42,8 +43,12 @@ function App() {
             </Accordion>
          </section>
          <section>
-            <SearchableList items={PLACES} />
-            <SearchableList items={['item 1', 'item 2']} />
+            <SearchableList items={PLACES}>
+               {(item) => <Place item={item} />}
+            </SearchableList>
+            <SearchableList items={['item 1', 'item 2']}>
+               {(item) => item}
+            </SearchableList>
          </section>
       </main>
    );
