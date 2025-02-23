@@ -10,16 +10,10 @@ function App() {
 
             <Accordion className="accordion">
                <Accordion.Item id="experience" className="accordion-item">
-                  <AccordionTitle
-                     id="experience"
-                     className="accordion-item-tittle"
-                  >
+                  <AccordionTitle className="accordion-item-tittle">
                      We got 20 years of experience
                   </AccordionTitle>
-                  <AccordionContent
-                     id="experience"
-                     className="accordion-item-content"
-                  >
+                  <AccordionContent className="accordion-item-content">
                      <article>
                         <p>You can&apos;t go wrong with us.</p>
                         <p>
@@ -30,16 +24,10 @@ function App() {
                   </AccordionContent>
                </Accordion.Item>
                <Accordion.Item id="local-guides" className="accordion-item">
-                  <AccordionTitle
-                     id="local-guides"
-                     className="accordion-item-tittle"
-                  >
+                  <AccordionTitle className="accordion-item-tittle">
                      We&apos;re working with local guides
                   </AccordionTitle>
-                  <AccordionContent
-                     id="local-guides"
-                     className="accordion-item-content"
-                  >
+                  <AccordionContent className="accordion-item-content">
                      <article>
                         <p>We are not doing this along from our office.</p>
                         <p>
