@@ -29,7 +29,10 @@ export default function ChallengeItem({
    }
 
    return (
-      <li>
+      <motion.li
+         layout
+         transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+      >
          <article className="challenge-item">
             <header>
                <img {...challenge.image} />
@@ -66,6 +69,6 @@ export default function ChallengeItem({
                )}
             </div>
          </article>
-      </li>
+      </motion.li>
    );
 }
