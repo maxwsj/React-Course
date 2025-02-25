@@ -19,12 +19,12 @@ cars = [1, 2, 3];
 choices = [true, false, false];
 
 // Objects
-let person: {
+let personss: {
    name: string;
    age: number;
 };
 
-person = {
+personss = {
    name: 'Max',
    age: 32,
 };
@@ -34,3 +34,36 @@ let people: {
    name: string;
    age: number;
 }[];
+
+// Type inference
+let course = 'React - the complete guide';
+
+// Union Type
+
+let types: string | number = 'React - the complete guide';
+types = 11234;
+
+// Type Aliases
+
+type Person = {
+   name: string;
+   age: number;
+};
+
+let person: Person;
+
+// Functions and types
+function add(a: number, b: number): number | string {
+   return a + b;
+}
+
+// Generics
+function insertAtBeginning<T>(array: T[], value: T) {
+   const newArray = [value, ...array];
+   return newArray;
+}
+
+const demoArray = [1, 2, 3];
+
+const updatedArray = insertAtBeginning(demoArray, -1); // [-1, 1, 2, 3]
+const stringArray = insertAtBeginning(['a', 'b'], 'd');
